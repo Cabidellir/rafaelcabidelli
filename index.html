@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Cabidelli - Logística & Data Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Pequeno ajuste para garantir que o menu mobile fique sobreposto */
+        #mobile-menu { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-900">RC.</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-blue-900 px-3 py-2 font-medium">Início</a>
+                    <a href="#about" class="text-slate-600 hover:text-blue-900 px-3 py-2 font-medium">Sobre</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-900 px-3 py-2 font-medium">Especialidades</a>
+                    <a href="#experience" class="text-slate-600 hover:text-blue-900 px-3 py-2 font-medium">Trajetória</a>
+                    <a href="#contact" class="bg-blue-900 text-white hover:bg-blue-800 px-4 py-2 rounded-md font-medium transition">Contato</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-slate-600 hover:text-blue-900 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600 hover:bg-slate-100">Início</a>
+                <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600 hover:bg-slate-100">Sobre</a>
+                <a href="#experience" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600 hover:bg-slate-100">Experiência</a>
+                <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 text-blue-900 font-bold">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-slate-100 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-900 uppercase bg-blue-100 rounded-full">
+                    Logística & Data Analytics
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Transformando Dados em <span class="text-blue-900">Eficiência Operacional</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Supervisor de Logística e Analista com mais de 10 anos de experiência. 
+                    Especialista em unir gestão de armazéns com inteligência de dados (Power BI, Lean Six Sigma) para otimizar processos e reduzir custos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-blue-900 text-white rounded-lg font-semibold shadow-lg hover:bg-blue-800 transition text-center">
+                        Solicitar Consultoria
+                    </a>
+                    <a href="#experience" class="px-8 py-3 bg-white text-blue-900 border border-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition text-center">
+                        Ver Experiência
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="w-72 h-72 md:w-96 md:h-96 bg-blue-900 rounded-full opacity-10 blur-3xl absolute"></div>
+                <div class="relative z-10 bg-white p-6 rounded-2xl shadow-xl max-w-sm w-full">
+                    <div class="w-full h-64 bg-slate-200 rounded-xl mb-4 overflow-hidden flex items-center justify-center">
+                        <span class="text-slate-400">Sua Foto Aqui</span>
+                        </div>
+                    <h3 class="text-xl font-bold text-slate-900">Rafael Cabidelli</h3>
+                    <p class="text-slate-500">Supervisor de Logística & Analista</p>
+                    <div class="mt-4 flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-bold rounded">Six Sigma Yellow Belt</span>
+                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded">Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Competências Chave</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+                    A combinação perfeita entre liderança operacional e análise técnica.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-50 rounded-xl hover:shadow-lg transition duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Análise de Dados</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Criação de dashboards de performance e gestão de indicadores (KPIs) para tomada de decisão.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> Power BI & Excel Avançado</li>
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> VBA & Access</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-xl hover:shadow-lg transition duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gestão Logística</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Experiência consolidada em operações de armazém, do recebimento à expedição (end-to-end).
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> Gestão de Inventário</li>
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> WMS & SAP</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-xl hover:shadow-lg transition duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="box"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Melhoria Contínua</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Aplicação de metodologias ágeis e de qualidade para reengenharia de processos.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> Lean Six Sigma (Yellow Belt)</li>
+                        <li class="flex items-center text-sm text-slate-700"><i data-lucide="check-circle" class="text-green-500 w-4 h-4 mr-2"></i> PDCA / DMAIC / 5S</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Trajetória Profissional</h2>
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-blue-200">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-900 border-4 border-slate-50"></div>
+                    <div class="mb-1 text-sm text-blue-900 font-bold uppercase tracking-wide">Junho/2024 - Atual</div>
+                    <h3 class="text-2xl font-bold text-slate-900">Process Reengineering</h3>
+                    <h4 class="text-lg text-slate-600 mb-4">DHL Supply Chain | Lisboa, Portugal</h4>
+                    <p class="text-slate-700">Identificação de ineficiências operacionais e criação de dashboards em Power BI para monitorização de performance.</p>
+                </div>
+                <div class="relative pl-8 border-l-2 border-blue-200">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="mb-1 text-sm text-slate-500 font-bold uppercase tracking-wide">2022 - 2024</div>
+                    <h3 class="text-2xl font-bold text-slate-900">Operador de Armazém & Apoio à Liderança</h3>
+                    <h4 class="text-lg text-slate-600 mb-4">DHL Supply Chain</h4>
+                    <p class="text-slate-700">Desenvolvimento de análises de produtividade e Picking Accuracy, além de suporte direto em processos de otimização operacional.</p>
+                </div>
+                 <div class="relative pl-8 border-l-2 border-blue-200">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="mb-1 text-sm text-slate-500 font-bold uppercase tracking-wide">2021 - 2022</div>
+                    <h3 class="text-2xl font-bold text-slate-900">Analista de Estoque</h3>
+                    <h4 class="text-lg text-slate-600 mb-4">Embelleze | Rio de Janeiro</h4>
+                    <p class="text-slate-700">Gestão de inventário cíclico, análise comparativa entre sistemas para confiabilidade de dados e desenvolvimento de relatórios de stock.</p>
+                </div>
+                 <div class="relative pl-8 border-l-2 border-blue-200">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-slate-50"></div>
+                    <div class="mb-1 text-sm text-slate-500 font-bold uppercase tracking-wide">2019 - 2021</div>
+                    <h3 class="text-2xl font-bold text-slate-900">Supervisor de Operações</h3>
+                    <h4 class="text-lg text-slate-600 mb-4">Americanas S.A. | Brasil</h4>
+                    <p class="text-slate-700">Supervisão de CD com foco em produtividade, gestão de inventário e condução de reuniões para análise de KPIs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                        <span class="bg-blue-100 p-2 rounded mr-3 text-blue-900"><i data-lucide="award"></i></span>
+                        Certificações
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-slate-50 rounded-lg border-l-4 border-green-500">
+                            <span class="font-bold block text-slate-900">Lean Six Sigma - Yellow Belt</span>
+                        </li>
+                        <li class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+                            <span class="font-bold block text-slate-900">Agile Scrum Foundation</span>
+                        </li>
+                        <li class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+                            <span class="font-bold block text-slate-900">Projetos de Sistemas de TI</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                        <span class="bg-blue-100 p-2 rounded mr-3 text-blue-900"><i data-lucide="graduation-cap"></i></span>
+                        Formação Acadêmica
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-slate-50 rounded-lg">
+                            <span class="font-bold block text-slate-900">MBA em Gestão de Logística</span>
+                            <span class="text-slate-600 text-sm">ABRACOMEX (2019-2020)</span>
+                        </li>
+                        <li class="p-4 bg-slate-50 rounded-lg">
+                            <span class="font-bold block text-slate-900">Graduação em Supply Chain</span>
+                            <span class="text-slate-600 text-sm">Universidade Estácio de Sá (2015-2017)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8">Vamos Otimizar sua Operação?</h2>
+            <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+                Estou disponível para projetos de consultoria, análise de dados ou gestão operacional em Portugal.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:rafaelcabidelli@gmail.com" class="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 px-6 py-4 rounded-lg transition">
+                    <i data-lucide="mail"></i>
+                    <span>rafaelcabidelli@gmail.com</span>
+                </a>
+                <a href="tel:+351934111005" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg transition border border-slate-700">
+                    <i data-lucide="phone"></i>
+                    <span>+351 934 111 005</span>
+                </a>
+                <div class="flex items-center justify-center gap-3 bg-slate-800 px-6 py-4 rounded-lg border border-slate-700">
+                    <i data-lucide="map-pin"></i>
+                    <span>Casal de Cambra - Sintra</span>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-slate-500 text-sm">
+                <p>&copy; 2024 Rafael Cabidelli. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializa os ícones
+        lucide.createIcons();
+
+        // Lógica do Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                // Troca ícone para X (opcional, requer lógica extra ou re-render, mantive simples)
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
