@@ -8,151 +8,208 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         #mobile-menu { transition: all 0.3s ease-in-out; }
+        .case-card:hover .case-icon { transform: scale(1.1) rotate(5deg); }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
 
-    <nav class="fixed w-full bg-white shadow-sm z-50">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-blue-900">Rafael Cabidelli</span>
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-blue-900 tracking-tight">Rafael Cabidelli</span>
                 </div>
                 
-                <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#home" class="text-slate-600 hover:text-blue-900 px-2 py-2 font-medium transition-colors">Início</a>
-                    <a href="#cases" class="text-slate-600 hover:text-blue-900 px-2 py-2 font-medium transition-colors">Cases</a>
-                    <a href="#skills" class="text-slate-600 hover:text-blue-900 px-2 py-2 font-medium transition-colors">Especialidades</a>
-                    <a href="#experience" class="text-slate-600 hover:text-blue-900 px-2 py-2 font-medium transition-colors">Trajetória</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Início</a>
+                    <a href="#cases" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Cases</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Especialidades</a>
+                    <a href="#experience" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Trajetória</a>
                     
                     <div class="flex items-center border-l pl-6 ml-2 space-x-2">
                         <span class="text-xs font-bold text-blue-900">PT</span>
-                        <a href="index_en.html" class="w-10 h-5 bg-slate-200 rounded-full relative p-1 flex items-center hover:bg-slate-300 transition-colors">
+                        <a href="index_en.html" title="Switch to English" class="w-10 h-5 bg-slate-200 rounded-full relative p-1 flex items-center hover:bg-slate-300 transition-all">
                             <div class="w-3 h-3 bg-white rounded-full shadow-sm"></div>
                         </a>
                         <span class="text-xs font-bold text-slate-400">EN</span>
                     </div>
 
-                    <a href="#contact" class="bg-blue-900 text-white hover:bg-blue-800 px-4 py-2 rounded-md font-medium transition-all hover:scale-105 active:scale-95">Contato</a>
+                    <a href="#contact" class="bg-blue-900 text-white hover:bg-blue-800 px-5 py-2 rounded-lg font-medium transition-all hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10">Contato</a>
                 </div>
 
                 <div class="md:hidden flex items-center gap-4">
-                    <a href="index_en.html" class="text-xs font-bold border px-2 py-1 rounded">EN</a>
-                    <button onclick="toggleMenu()" class="text-slate-600 hover:text-blue-900 focus:outline-none">
-                        <i data-lucide="menu" id="menu-icon"></i>
+                    <a href="index_en.html" class="text-xs font-bold bg-slate-100 px-2 py-1 rounded">EN</a>
+                    <button onclick="toggleMenu()" class="text-slate-600 focus:outline-none">
+                        <i data-lucide="menu"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600">Início</a>
-                <a href="#cases" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600">Cases de Sucesso</a>
-                <a href="#experience" onclick="toggleMenu()" class="block px-3 py-2 text-slate-600">Experiência</a>
-                <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 text-blue-900 font-bold">Contato</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Início</a>
+                <a href="#cases" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Cases de Sucesso</a>
+                <a href="#skills" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Especialidades</a>
+                <a href="#experience" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Trajetória</a>
+                <a href="#contact" onclick="toggleMenu()" class="block text-lg font-bold text-blue-900 pt-2 border-t">Contato</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-slate-100 to-white">
+    <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
-            <div class="md:w-1/2 mt-10 md:mt-0">
-                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-900 uppercase bg-blue-100 rounded-full">
+            <div class="md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
+                <div class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-blue-900 uppercase bg-blue-100 rounded-full">
                     Logística & Data Analytics
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                    Transformando Dados em <span class="text-blue-900">Eficiência Operacional</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+                    Dados que impulsionam a <span class="text-blue-900">Eficiência Operacional</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                    Especialista em unir gestão de armazéns com inteligência de dados para otimizar processos e reduzir custos. Focado em resultados escaláveis para grandes operações.
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
+                    Especialista em unir gestão de armazéns com inteligência de dados para otimizar processos e reduzir custos reais em operações de larga escala.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="pdf/cv-rafael-cabidelli.pdf" target="_blank" class="px-8 py-3 bg-blue-900 text-white rounded-lg font-semibold shadow-lg hover:bg-blue-800 hover:scale-105 transition-all text-center flex items-center justify-center gap-2">
-                        <i data-lucide="download" class="w-5 h-5"></i> Download CV (PDF)
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="assets/pdf/cv-rafael-cabidelli.pdf" target="_blank" class="px-8 py-4 bg-blue-900 text-white rounded-xl font-bold shadow-xl shadow-blue-900/20 hover:bg-blue-800 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5"></i> Download CV (PT)
                     </a>
-                    <a href="#cases" class="px-8 py-3 bg-white text-blue-900 border border-blue-900 rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition-all text-center">
+                    <a href="#cases" class="px-8 py-4 bg-white text-blue-900 border-2 border-blue-900/10 rounded-xl font-bold hover:bg-blue-50 hover:-translate-y-1 transition-all text-center">
                         Ver Cases de Sucesso
                     </a>
                 </div>
             </div>
             
             <div class="md:w-1/2 flex justify-center relative">
-                <div class="w-72 h-72 md:w-96 md:h-96 bg-blue-900 rounded-full opacity-10 blur-3xl absolute"></div>
-                <div class="relative z-10 bg-white p-4 rounded-2xl shadow-xl max-w-sm w-full group transition-all duration-500 hover:shadow-2xl">
-                    <div class="w-full h-80 bg-slate-100 rounded-xl mb-4 overflow-hidden relative">
-                        <img src="assets/img/foto-profissional.jpg" alt="Rafael Cabidelli" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110">
+                <div class="w-72 h-72 md:w-[450px] md:h-[450px] bg-blue-600 rounded-full opacity-5 blur-3xl absolute animate-pulse"></div>
+                <div class="relative z-10 bg-white p-3 rounded-[2.5rem] shadow-2xl max-w-sm w-full transition-transform duration-500 hover:rotate-1">
+                    <div class="w-full h-[400px] bg-slate-200 rounded-[2rem] overflow-hidden">
+                        <img src="assets/img/foto-profissional.jpg" alt="Rafael Cabidelli" class="object-cover w-full h-full">
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900">Rafael Cabidelli</h3>
-                    <p class="text-slate-500 font-medium">Process Reengineering @ DHL Supply Chain</p>
-                    <div class="mt-4 flex gap-2 flex-wrap">
-                        <span class="px-2 py-1 bg-green-100 text-green-800 text-[10px] font-bold rounded uppercase transition-colors">Six Sigma Yellow Belt</span>
-                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-[10px] font-bold rounded uppercase">Power BI Expert</span>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-slate-900">Rafael Cabidelli</h3>
+                        <p class="text-blue-800 font-semibold mb-4">Process Reengineering @ DHL</p>
+                        <div class="flex justify-center gap-2">
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-black rounded-lg border border-green-100 uppercase tracking-tighter">Lean Six Sigma</span>
+                            <span class="px-3 py-1 bg-yellow-50 text-yellow-700 text-[10px] font-black rounded-lg border border-yellow-100 uppercase tracking-tighter">Power BI Expert</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cases" class="py-20 bg-slate-50">
+    <section id="cases" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Cases de Sucesso</h2>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Resultados mensuráveis entregues através de análise de dados e melhoria de processos.</p>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-black text-slate-900 mb-4">Cases de Sucesso</h2>
+                    <p class="text-lg text-slate-600">Projetos reais onde a análise de dados gerou impacto financeiro e operacional direto.</p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-8">
-                        <div class="flex items-center gap-2 text-blue-900 mb-4">
-                            <i data-lucide="trending-up" class="w-6 h-6"></i>
-                            <span class="font-bold uppercase tracking-wider text-sm">Otimização DHL</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="case-card group bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:bg-white hover:shadow-2xl hover:shadow-blue-900/5">
+                    <div class="case-icon w-14 h-14 bg-blue-900 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-transform duration-500">
+                        <i data-lucide="bar-chart-big"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">Otimização de Fluxo DHL</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed italic">"Implementação de visibilidade horária para mitigar atrasos críticos na expedição."</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs uppercase">Desafio</div>
+                            <p class="text-slate-700 text-sm leading-relaxed">Atrasos frequentes de 15% nas janelas de saída por falta de monitoramento em tempo real.</p>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-900">Redução de Gargalos na Expedição</h3>
-                        <p class="text-slate-600 mb-6 italic">"A falta de visibilidade em tempo real causava atrasos críticos na saída de veículos."</p>
-                        <div class="space-y-4">
-                            <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-lucide="alert-circle" class="w-4 h-4"></i>
-                                </div>
-                                <p class="text-sm text-slate-700"><strong>Desafio:</strong> Identificar por que 15% das rotas sofriam atraso no carregamento.</p>
-                            </div>
-                            <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-lucide="check" class="w-4 h-4"></i>
-                                </div>
-                                <p class="text-sm text-slate-700"><strong>Resultado:</strong> Implementação de dashboard de produtividade horária, reduzindo atrasos em 20% no primeiro trimestre.</p>
-                            </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-xs uppercase">Impacto</div>
+                            <p class="text-slate-700 text-sm leading-relaxed font-bold">Redução de 20% no tempo de carregamento e eliminação de gargalos matinais.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-8">
-                        <div class="flex items-center gap-2 text-blue-900 mb-4">
-                            <i data-lucide="database" class="w-6 h-6"></i>
-                            <span class="font-bold uppercase tracking-wider text-sm">Inventário & Acuracidade</span>
+                <div class="case-card group bg-slate-50 rounded-3xl p-8 border border-slate-100 transition-all hover:bg-white hover:shadow-2xl hover:shadow-blue-900/5">
+                    <div class="case-icon w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-transform duration-500">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">Acuracidade de Estoque</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed italic">"Saneamento de dados e auditoria sistemática na operação Embelleze."</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs uppercase">Desafio</div>
+                            <p class="text-slate-700 text-sm leading-relaxed">Confiabilidade de estoque abaixo de 92%, gerando rupturas de vendas.</p>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-900">Confiabilidade de Estoque (Embelleze)</h3>
-                        <p class="text-slate-600 mb-6 italic">"Divergências entre sistema e físico impactavam o faturamento direto."</p>
-                        <div class="space-y-4">
-                            <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-lucide="alert-circle" class="w-4 h-4"></i>
-                                </div>
-                                <p class="text-sm text-slate-700"><strong>Desafio:</strong> Acuracidade de estoque abaixo de 92% devido a erros de processamento.</p>
-                            </div>
-                            <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <i data-lucide="check" class="w-4 h-4"></i>
-                                </div>
-                                <p class="text-sm text-slate-700"><strong>Resultado:</strong> Reestruturação do Inventário Cíclico e análise via VBA, elevando a acuracidade para 98.5%.</p>
-                            </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-xs uppercase">Impacto</div>
+                            <p class="text-slate-700 text-sm leading-relaxed font-bold">Elevação do IRA para 98.5% através de automação em VBA.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="skills" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Especialidades Técnicas</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 text-blue-900 rounded-xl mb-6"><i data-lucide="pie-chart"></i></div>
+                    <h3 class="text-xl font-bold mb-3">BI & Analytics</h3>
+                    <p class="text-slate-600 text-sm">Dashboards em Power BI, Power Query, DAX e Automação via Excel/VBA.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 text-blue-900 rounded-xl mb-6"><i data-lucide="settings"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Gestão de WMS</h3>
+                    <p class="text-slate-600 text-sm">Operação e análise em sistemas SAP, Manhattan e BlueYonder.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 text-blue-900 rounded-xl mb-6"><i data-lucide="zap"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Lean Six Sigma</h3>
+                    <p class="text-slate-600 text-sm">Aplicação de Kaizen e DMAIC para redução de desperdícios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-slate-900 mb-16 text-center">Trajetória Profissional</h2>
+            <div class="space-y-12">
+                <div class="relative pl-10 border-l-4 border-blue-900/10">
+                    <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-blue-900"></div>
+                    <div class="text-sm font-black text-blue-900 uppercase mb-2">2024 - Presente</div>
+                    <h3 class="text-2xl font-bold">Process Reengineering Specialist</h3>
+                    <p class="text-slate-500 font-bold mb-4 italic">DHL Supply Chain | Lisboa, Portugal</p>
+                    <p class="text-slate-700 leading-relaxed">Focado na digitalização de indicadores de performance e redesenho de processos operacionais para aumento de throughput.</p>
+                </div>
+                <div class="relative pl-10 border-l-4 border-slate-100">
+                    <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-slate-300"></div>
+                    <div class="text-sm font-black text-slate-400 uppercase mb-2">2019 - 2021</div>
+                    <h3 class="text-2xl font-bold">Supervisor de Operações</h3>
+                    <p class="text-slate-500 font-bold mb-4 italic">Americanas S.A. | Brasil</p>
+                    <p class="text-slate-700 leading-relaxed">Liderança de grandes equipes em Centros de Distribuição, com foco total em KPIs de produtividade e acuracidade de picking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Vamos Conversar?</h2>
+            <p class="text-slate-400 mb-12 max-w-lg mx-auto text-lg">Disponível para desafios em Supply Chain, Consultoria de Dados e Gestão Operacional.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16 font-medium">
+                <a href="mailto:rafaelcabidelli@gmail.com" class="flex items-center justify-center gap-3 bg-blue-600 px-8 py-4 rounded-2xl hover:bg-blue-500 transition-all">
+                    <i data-lucide="mail"></i> rafaelcabidelli@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" class="flex items-center justify-center gap-3 bg-slate-800 px-8 py-4 rounded-2xl border border-slate-700 hover:bg-slate-700 transition-all">
+                    <i data-lucide="linkedin"></i> LinkedIn Profissional
+                </a>
+            </div>
+
+            <p class="text-slate-500 text-sm">© 2024 Rafael Cabidelli. Santarém, Portugal.</p>
+        </div>
+    </footer>
 
     <script>
         lucide.createIcons();
