@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automação de Dados & BI | Rafael Cabidelli</title>
+<meta name="description" content="Case study de automação de dados e Business Intelligence: ClicknDECiDE, SQL, Power Automate, SharePoint e Power BI.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100">
+<nav class="border-b border-white/10 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="../index.html" class="font-bold tracking-tight">Rafael Cabidelli</a>
+    <a href="../index.html#cases" class="text-sm text-slate-300 hover:text-white">← Voltar aos cases</a>
+  </div>
+</nav>
+
+<header class="max-w-6xl mx-auto px-5 pt-20 pb-16">
+  <div class="max-w-4xl">
+    <span class="inline-flex px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-400/20 text-xs font-bold uppercase tracking-widest">Case Study · Data & Automation</span>
+    <h1 class="mt-6 text-5xl md:text-7xl font-black leading-tight">Automação de Dados<br><span class="text-blue-400">& Business Intelligence</span></h1>
+    <p class="mt-6 text-xl text-slate-300 max-w-3xl leading-relaxed">Relatório histórico de ocupação operacional construído através de um fluxo integrado de extração, automação, armazenamento e visualização.</p>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto px-5 pb-20">
+  <div class="rounded-3xl overflow-hidden border border-white/10 bg-slate-900 shadow-2xl">
+    <img src="../assets/img/cases/ocupacao-dashboard-anonimizado.jpg" alt="Dashboard histórico de ocupação anonimizado" class="w-full">
+    <div class="px-6 py-4 text-sm text-slate-400">Dashboard anonimizado para apresentação pública.</div>
+  </div>
+</section>
+
+<section class="bg-white text-slate-900 py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="text-blue-700 font-black uppercase tracking-widest text-xs">O desafio</p>
+        <h2 class="text-4xl font-black mt-3 mb-6">Transformar uma rotina diária num processo automatizado.</h2>
+        <p class="text-slate-600 leading-relaxed">O processo dependia da geração de um report com dados preparados em ClicknDECiDE/SQL e da sua distribuição diária por e-mail. A solução criada automatiza a passagem dessa informação para um armazenamento histórico e disponibiliza os dados para análise no Power BI.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><div class="text-3xl font-black">5</div><div class="text-sm text-slate-500 mt-1">tecnologias integradas</div></div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><div class="text-3xl font-black">1</div><div class="text-sm text-slate-500 mt-1">fluxo end-to-end</div></div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><div class="text-3xl font-black">SQL</div><div class="text-sm text-slate-500 mt-1">preparação dos dados</div></div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><div class="text-3xl font-black">BI</div><div class="text-sm text-slate-500 mt-1">camada de análise</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-5 py-20">
+  <div class="flex items-end justify-between gap-6 mb-10">
+    <div><p class="text-blue-400 font-black uppercase tracking-widest text-xs">Arquitetura</p><h2 class="text-4xl font-black mt-3">Do dado ao dashboard</h2></div>
+  </div>
+  <div class="rounded-3xl overflow-hidden border border-white/10 bg-white">
+    <img src="../assets/img/cases/ocupacao-arquitetura.svg" alt="Arquitetura da solução de automação de dados" class="w-full">
+  </div>
+</section>
+
+<section class="bg-slate-900 border-y border-white/10 py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <p class="text-blue-400 font-black uppercase tracking-widest text-xs">Stack</p>
+    <h2 class="text-4xl font-black mt-3 mb-10">Ferramentas utilizadas</h2>
+    <div class="grid md:grid-cols-5 gap-4">
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10"><i data-lucide="database" class="mb-5 text-blue-400"></i><h3 class="font-bold">ClicknDECiDE</h3><p class="text-sm text-slate-400 mt-2">Extração e preparação com SQL.</p></div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10"><i data-lucide="mail" class="mb-5 text-blue-400"></i><h3 class="font-bold">E-mail</h3><p class="text-sm text-slate-400 mt-2">Distribuição automática do report.</p></div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10"><i data-lucide="workflow" class="mb-5 text-blue-400"></i><h3 class="font-bold">Power Automate</h3><p class="text-sm text-slate-400 mt-2">Orquestração do processo.</p></div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10"><i data-lucide="folder-kanban" class="mb-5 text-blue-400"></i><h3 class="font-bold">SharePoint</h3><p class="text-sm text-slate-400 mt-2">Armazenamento do histórico.</p></div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10"><i data-lucide="bar-chart-3" class="mb-5 text-blue-400"></i><h3 class="font-bold">Power BI</h3><p class="text-sm text-slate-400 mt-2">Modelo, indicadores e visualização.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white text-slate-900 py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div><div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-5"><i data-lucide="database-zap"></i></div><h3 class="text-xl font-black mb-3">Data Engineering</h3><p class="text-slate-600">Estruturação do fluxo de dados entre diferentes ferramentas e etapas do processo.</p></div>
+      <div><div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-5"><i data-lucide="bot"></i></div><h3 class="text-xl font-black mb-3">Automation</h3><p class="text-slate-600">Redução de tarefas repetitivas através de um processo acionado automaticamente pela chegada do report.</p></div>
+      <div><div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-5"><i data-lucide="chart-no-axes-combined"></i></div><h3 class="text-xl font-black mb-3">Business Intelligence</h3><p class="text-slate-600">Transformação do histórico em indicadores, filtros e acompanhamento da ocupação ao longo do tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="max-w-6xl mx-auto px-5 py-12 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-400">
+  <span>Rafael Cabidelli · Data & Process Analytics</span>
+  <a href="../index.html" class="hover:text-white">Voltar ao portfólio</a>
+</footer>
+<script>lucide.createIcons();</script>
+</body>
+</html>
