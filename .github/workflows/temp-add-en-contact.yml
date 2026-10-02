@@ -1,0 +1,58 @@
+name: Temporary Add English Contact Form
+
+on:
+  push:
+    paths:
+      - '.github/workflows/temp-add-en-contact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  add-form:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add English contact form and remove temporary workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index_en.html')
+          text = path.read_text(encoding='utf-8')
+
+          marker = '            <p class="text-slate-500 text-sm">© 2024 Rafael Cabidelli. Santarém, Portugal.</p>'
+
+          form = '''            <!-- Functional Contact Form -->
+            <div class="max-w-md mx-auto bg-slate-800 rounded-2xl p-8 text-left mb-10">
+                <h3 class="font-bold text-lg mb-4 text-center">Send me a direct message</h3>
+                <form action="https://formspree.io/f/mqpavado" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Your name" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-blue-500">
+                    <input type="email" name="email" placeholder="Your email" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-blue-500">
+                    <textarea name="message" rows="4" placeholder="How can I help?" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-blue-500"></textarea>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 transition-all py-3.5 rounded-xl font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="send"></i> Send Message
+                    </button>
+                </form>
+                <p class="text-[10px] text-slate-500 text-center mt-3">Secure form powered by Formspree</p>
+            </div>
+
+'''
+
+          if 'formspree.io/f/mqpavado' not in text:
+              if marker not in text:
+                  raise SystemExit('Expected footer marker not found')
+              text = text.replace(marker, form + marker, 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          rm -f .github/workflows/temp-add-en-contact.yml
+          git add index_en.html .github/workflows/temp-add-en-contact.yml
+          git commit -m 'Add English contact form'
+          git push
