@@ -11,7 +11,7 @@ O radar representa uma autoavaliação contextual da prática, reunindo experiê
 
 ## Critério do radar
 
-Escala ordinal de contexto de prática: 1 = fundamentos (estudo/contacto inicial); 2 = aplicação prática (projetos, exercícios ou iniciativas concretas); 3 = prática recorrente (vários projetos ou uso diário no trabalho). O centro, 0, é ausência de contexto registado, não incapacidade.
+Escala ordinal de contexto de prática: 1 = fundamentos (estudo/contacto inicial); 2 = aplicação prática (projetos, exercícios ou iniciativas concretas); 3 = prática recorrente (vários projetos ou uso diário no trabalho). 4 = prática avançada (problemas complexos em contextos variados, decisões técnicas justificadas e resultados demonstráveis). O patamar 4 não significa conhecimento completo. Os níveis atuais permanecem em 3 ou 2, com espaço visual para evolução. O centro, 0, é ausência de contexto registado, não incapacidade.
 
 Avaliação de 22/10/2026:
 
