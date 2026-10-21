@@ -10,8 +10,7 @@
   "xpRule": {
     "pointsPerBadge": 1,
     "pointsPerTrophy": 0,
-    "pointsPerProject": 0,
-    "radarMax": 32
+    "pointsPerProject": 0
   },
   "badges": [
     {

@@ -1,34 +1,43 @@
-# Competências e formação / Skills and training
+# Radar de Habilidades e formação
 
-O site continua estático, com duas páginas HTML e o design Tailwind existente. A nova secção usa CSS local, SVG e JavaScript sem dependências. Não faz pedidos a APIs Microsoft em tempo de execução. A galeria e os dados do radar continuam disponíveis sem JavaScript; os filtros só aparecem quando o script funciona.
+O radar representa uma autoavaliação contextual da prática, reunindo experiência profissional declarada, projetos públicos e formação. Não representa contagem de selos, percentagens de domínio ou certificação de proficiência.
 
-## Atualizar dados
+## Dados editáveis
 
-1. Editar `assets/data/learning.json`: títulos PT/EN, data ISO, área principal, `partial` quando o título estiver cortado, e `verificationUrl` apenas quando existir uma ligação individual real. Não substituir uma ligação individual por um URL genérico de um curso.
-2. Atualizar o retrato agregado apenas quando houver uma nova fonte datada. O retrato do PDF e o total de XP da galeria são conceitos separados.
-3. Executar `python scripts/build-learning.py` e incluir as duas páginas HTML geradas no commit. Não editar diretamente o bloco `learning:start` / `learning:end`.
+- `assets/data/skills.json`: patamares, descrições PT/EN, fontes e ligações por habilidade.
+- `assets/data/learning.json`: formação Microsoft Learn, datas ISO, títulos e URLs individuais quando disponíveis.
+- Executar `python scripts/build-learning.py` e incluir as duas páginas geradas no commit. O gerador usa apenas a biblioteca padrão Python e valida IDs, datas, áreas, patamares e política XP.
+- Não editar diretamente os blocos `learning:start` / `learning:end`. Ao rever a avaliação, atualizar a data no JSON e no texto do gerador.
 
-O gerador valida IDs únicos, datas, áreas, títulos e a correspondência da política XP com o texto apresentado. Não requer pacotes Python adicionais. Para mudar a política XP, atualizar a regra JSON, o gerador, os textos e a validação em conjunto.
+## Critério do radar
 
-## Proveniência e política
+Escala ordinal de contexto de prática: 1 = fundamentos (estudo/contacto inicial); 2 = aplicação prática (projetos, exercícios ou iniciativas concretas); 3 = prática recorrente (vários projetos ou uso diário no trabalho). O centro, 0, é ausência de contexto registado, não incapacidade.
 
-- Fonte: PDF `selos microsoft learn.pdf`, cinco páginas, captura de 21/10/2026. Não foi publicado porque contém um endereço de email pessoal.
-- 32 selos de módulos transcritos; 9 troféus e nível 8 apenas no resumo. Nenhum troféu individual ou certificação foi inventado.
-- Alguns títulos estão cortados na margem direita. São transcritos como excertos com reticências; traduções EN são editoriais e não nomes oficiais de credenciais.
-- XP local: 1 por selo catalogado, atribuído a uma única área principal; zero por troféus, nível ou projetos. Não é o XP oficial Microsoft Learn e não mede proficiência.
-- Radar: escala fixa de 0–32 selos por eixo, sem normalização ao maior valor. A concentração em Power BI reflete esta fonte, não uma avaliação comparativa de capacidade. Se uma área ultrapassar 32, rever a escala e o texto antes de publicar.
-- Classificação editorial: Power BI 24; DAX 6; SQL 1; automação 1 (Power Apps); programação 0; cibersegurança 0. Segurança de modelos e de linhas pertence a BI, sem inferir qualificação em cibersegurança.
-- O case existente é apresentado separadamente como evidência prática de BI, SQL e automação, sem XP. Está em português também quando referido pela página inglesa.
-- Apenas Transact-SQL tem um URL individual fornecido na conversa anterior. A tentativa de validação automática desse URL não teve sucesso. As restantes ligações apontam para o perfil derivado do mesmo identificador público; não comprovam individualmente os módulos.
+Avaliação de 22/10/2026:
 
-## Verificação e limites
+| Área | Patamar | Justificação |
+|---|---|---|
+| Power BI | 3 | Vários dashboards operacionais declarados; case de ocupação publicado |
+| DAX | 3 | Aplicação em vários relatórios de picking accuracy e ocupação declarada; sem amostra pública específica de fórmulas |
+| SQL | 3 | Uso diário durante cerca de seis meses na ID Logistics declarado; área recente; case com SQL e formação |
+| Automação | 3 | Excel/Access e Power Automate online/desktop declarados; case de integração publicado |
+| Programação | 2 | Scripts públicos no Sabedoria Simples e 241 Solutions; C2L em desenvolvimento |
+| Cibersegurança | 2 | Jogos e melhorias Hacker Rangers na Americanas; segundo lugar interno nacional declarado, sem comprovativo público associado |
 
-Verificar PT/EN, filtros por área, estado vazio, reposição de todos os registos, seleção por teclado, nomes acessíveis, foco visível e larguras móvel/desktop. As datas são renderizadas a partir de ISO sem conversão de fuso horário.
+O mesmo patamar não significa o mesmo tempo de experiência, complexidade ou domínio técnico. Hacker Rangers descreve sensibilização e boas práticas, sem certificar pentesting. Código disponível não comprova autoria integral, autonomia ou domínio de todas as tecnologias. Não foram executados ou auditados os projetos externos.
 
-O site existente depende de Tailwind CDN e Lucide remoto. Esta alteração não acrescenta bibliotecas de gráficos, fontes, imagens ou chamadas remotas. O JavaScript da nova secção é independente de Lucide.
+Foram inspecionados os scripts JavaScript públicos de Cabidellir/sabedoriasimples e Cabidellir/twoforonesolutions, README e estrutura de crates de Cabidellir/C2L-Antivirus. O README C2L indica fase inicial de definição/arquitetura: não se afirma proteção validada ou funcionalidades futuras como entregues. Forks e número de repositórios não determinam patamares.
 
-Verificação realizada nesta alteração: contagem dos sete filtros (24/6/1/1/0/0/32), seleção SQL pelo radar, ativação DAX com Enter, estado inglês `1 training record`, ausência de transbordamento da secção a 375 e 1440 px, inspeção visual das duas disposições, sintaxe JavaScript, IDs/âncoras HTML e regeneração idempotente. Não foi executada uma auditoria completa com leitor de ecrã ou Lighthouse. A ligação de download do CV inglês foi corrigida para o PDF inglês que já existia no repositório.
+## Formação e XP
 
-## Melhorias futuras
+O XP local é exclusivo da galeria: 1 por selo catalogado, sem bónus por troféus, nível ou projetos. Não altera o radar e difere do XP oficial Microsoft Learn.
 
-Recolher ligações individuais de partilha e nomes completos dos títulos cortados; acrescentar projetos reproduzíveis para DAX/SQL e relatórios de testes para programação/cibersegurança; publicar transcrição redigida da fonte; compilar Tailwind localmente e fixar a versão de Lucide; adicionar auditoria automatizada de acessibilidade e desempenho.
+Fonte: PDF selos microsoft learn.pdf, cinco páginas, captura de 21/10/2026. Foram transcritos 32 selos; 9 troféus e nível 8 constam apenas do resumo. Títulos cortados conservam reticências e traduções EN são editoriais. Apenas Transact-SQL tem ligação individual fornecida, cuja validação automática não foi possível. Restantes URLs abrem o perfil, sem afirmar verificação individual. O PDF não foi publicado por conter email pessoal.
+
+## Interface e verificação
+
+A seleção de habilidades mostra experiência e fontes; os filtros afetam exclusivamente a formação. Sem JavaScript, todas as experiências e a galeria continuam em HTML estático. SVG e resumo textual descrevem o gráfico; botões têm foco visível e estados de seleção. Não há dependências novas ou APIs em tempo de execução. As dependências CDN preexistentes permanecem.
+
+Verificar PT/EN, independência radar/galeria, seleção das seis habilidades, filtros, estados vazios, teclado, larguras móvel/desktop e regeneração idempotente. Não equivale a auditoria completa com leitor de ecrã ou Lighthouse.
+
+Melhorias futuras: exemplos DAX anonimizados, case de macros/Power Automate Desktop e comprovativo Hacker Rangers; complementar com tarefas demonstráveis. Rever os patamares com novos exemplos, sem aumentar notas automaticamente.
