@@ -1,0 +1,250 @@
+{
+  "snapshot": {
+    "date": "2026-10-21",
+    "badges": 32,
+    "trophies": 9,
+    "level": 8,
+    "source": "selos microsoft learn.pdf"
+  },
+  "profileUrl": "https://learn.microsoft.com/users/RafaeldosSantosCabidelli-2017/achievements",
+  "xpRule": {
+    "pointsPerBadge": 1,
+    "pointsPerTrophy": 0,
+    "pointsPerProject": 0
+  },
+  "badges": [
+    {
+      "id": "learn-1",
+      "area": "sql",
+      "date": "2026-10-21",
+      "pt": "Introdução ao Transact-SQL",
+      "en": "Introduction to Transact-SQL",
+      "verificationUrl": "https://learn.microsoft.com/api/achievements/share/pt-br/RafaeldosSantosCabidelli-2017/ZJRAJMV2?sharingId=FA25622329C888A3"
+    },
+    {
+      "id": "learn-2",
+      "area": "bi",
+      "date": "2026-01-05",
+      "pt": "Introdução à análise de ponta a ponta usa…",
+      "en": "Introduction to end-to-end analytics us…",
+      "partial": true
+    },
+    {
+      "id": "learn-3",
+      "area": "automation",
+      "date": "2025-02-26",
+      "pt": "Crie seu primeiro aplicativo com o Power Apps e o Dataverse for Teams",
+      "en": "Create your first app with Power Apps and Dataverse for Teams"
+    },
+    {
+      "id": "learn-4",
+      "area": "bi",
+      "date": "2025-02-12",
+      "pt": "Implementar segurança em nível de linha…",
+      "en": "Implement row-level security…",
+      "partial": true
+    },
+    {
+      "id": "learn-5",
+      "area": "bi",
+      "date": "2025-02-11",
+      "pt": "Criar cálculos visuais no Power BI Desktop",
+      "en": "Create visual calculations in Power BI Desktop"
+    },
+    {
+      "id": "learn-6",
+      "area": "dax",
+      "date": "2025-02-10",
+      "pt": "Modificar o contexto de filtro do DAX em…",
+      "en": "Modify DAX filter context in…",
+      "partial": true
+    },
+    {
+      "id": "learn-7",
+      "area": "bi",
+      "date": "2025-02-10",
+      "pt": "Criar relatórios interativos usando o Copilot para Power BI",
+      "en": "Create interactive reports using Copilot for Power BI"
+    },
+    {
+      "id": "learn-8",
+      "area": "bi",
+      "date": "2025-01-22",
+      "pt": "Criar painéis no Power BI",
+      "en": "Create dashboards in Power BI"
+    },
+    {
+      "id": "learn-9",
+      "area": "bi",
+      "date": "2025-01-07",
+      "pt": "Gerenciar modelos semânticos no Power BI",
+      "en": "Manage semantic models in Power BI"
+    },
+    {
+      "id": "learn-10",
+      "area": "bi",
+      "date": "2024-11-12",
+      "pt": "Criar e gerenciar workspaces no Power BI",
+      "en": "Create and manage workspaces in Power BI"
+    },
+    {
+      "id": "learn-11",
+      "area": "bi",
+      "date": "2024-10-14",
+      "pt": "Criar relatórios paginados",
+      "en": "Create paginated reports"
+    },
+    {
+      "id": "learn-12",
+      "area": "bi",
+      "date": "2024-10-07",
+      "pt": "Realizar análise no Power BI",
+      "en": "Perform analysis in Power BI"
+    },
+    {
+      "id": "learn-13",
+      "area": "bi",
+      "date": "2024-08-30",
+      "pt": "Aprimorar os designs de relatórios do Power BI para a experiência do usuário",
+      "en": "Enhance Power BI report designs for user experience"
+    },
+    {
+      "id": "learn-14",
+      "area": "bi",
+      "date": "2024-07-16",
+      "pt": "Definir os requisitos de design de relatóri…",
+      "en": "Define report design requirements…",
+      "partial": true
+    },
+    {
+      "id": "learn-15",
+      "area": "bi",
+      "date": "2024-07-05",
+      "pt": "Configurar filtros de relatório do Power BI",
+      "en": "Configure Power BI report filters"
+    },
+    {
+      "id": "learn-16",
+      "area": "bi",
+      "date": "2024-05-06",
+      "pt": "Projetar relatórios do Power BI",
+      "en": "Design Power BI reports"
+    },
+    {
+      "id": "learn-17",
+      "area": "dax",
+      "date": "2024-04-22",
+      "pt": "Criar grupos de cálculo",
+      "en": "Create calculation groups"
+    },
+    {
+      "id": "learn-18",
+      "area": "bi",
+      "date": "2024-04-15",
+      "pt": "Criar relações entre modelos do Power BI",
+      "en": "Create relationships between Power BI models"
+    },
+    {
+      "id": "learn-19",
+      "area": "bi",
+      "date": "2024-04-08",
+      "pt": "Usar ferramentas para otimizar o desempenho do Power BI",
+      "en": "Use tools to optimize Power BI performance"
+    },
+    {
+      "id": "learn-20",
+      "area": "bi",
+      "date": "2024-03-19",
+      "pt": "Impor a segurança do modelo do Power B…",
+      "en": "Enforce Power BI model security…",
+      "partial": true
+    },
+    {
+      "id": "learn-21",
+      "area": "bi",
+      "date": "2024-03-19",
+      "pt": "Otimizar um modelo para desempenho no Power BI",
+      "en": "Optimize a model for performance in Power BI"
+    },
+    {
+      "id": "learn-22",
+      "area": "dax",
+      "date": "2024-02-26",
+      "pt": "Usar funções de inteligência de dados tem… Power BI Desktop",
+      "en": "Use time intelligence functions… Power BI Desktop",
+      "partial": true
+    },
+    {
+      "id": "learn-23",
+      "area": "dax",
+      "date": "2024-02-20",
+      "pt": "Adicionar tabelas e colunas calculadas a modelos do Power BI Desktop",
+      "en": "Add calculated tables and columns to Power BI Desktop models"
+    },
+    {
+      "id": "learn-24",
+      "area": "dax",
+      "date": "2024-02-14",
+      "pt": "Adicionar medidas a modelos do Power B…",
+      "en": "Add measures to Power BI models…",
+      "partial": true
+    },
+    {
+      "id": "learn-25",
+      "area": "dax",
+      "date": "2024-01-29",
+      "pt": "Escrever fórmulas DAX para modelos do Power BI Desktop",
+      "en": "Write DAX formulas for Power BI Desktop models"
+    },
+    {
+      "id": "learn-26",
+      "area": "bi",
+      "date": "2024-01-22",
+      "pt": "Projetar um modelo semântico no Power…",
+      "en": "Design a semantic model in Power…",
+      "partial": true
+    },
+    {
+      "id": "learn-27",
+      "area": "bi",
+      "date": "2024-01-17",
+      "pt": "Escolher uma estrutura de modelo do Power BI",
+      "en": "Choose a Power BI model framework"
+    },
+    {
+      "id": "learn-28",
+      "area": "bi",
+      "date": "2023-12-22",
+      "pt": "Descrever modelos do Power BI Desktop",
+      "en": "Describe Power BI Desktop models"
+    },
+    {
+      "id": "learn-29",
+      "area": "bi",
+      "date": "2023-11-08",
+      "pt": "Limpar, transformar e carregar dados no Power BI",
+      "en": "Clean, transform and load data in Power BI"
+    },
+    {
+      "id": "learn-30",
+      "area": "bi",
+      "date": "2023-06-13",
+      "pt": "Obter dados no Power BI",
+      "en": "Get data in Power BI"
+    },
+    {
+      "id": "learn-31",
+      "area": "bi",
+      "date": "2023-06-09",
+      "pt": "Comece a criar com o Power BI",
+      "en": "Get started building with Power BI"
+    },
+    {
+      "id": "learn-32",
+      "area": "bi",
+      "date": "2023-05-25",
+      "pt": "Descobrir a análise de dados",
+      "en": "Discover data analytics"
+    }
+  ]
+}
