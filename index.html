@@ -21,6 +21,7 @@
     <link rel="alternate" hreflang="en" href="https://cabidellir.github.io/rafaelcabidelli/index_en.html">
     <link rel="stylesheet" href="assets/css/learning.css">
     <script defer src="assets/js/learning.js"></script>
+    <link rel="stylesheet" href="assets/css/testimonials.css">
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
 
@@ -31,10 +32,11 @@
                     <span class="text-2xl font-bold text-blue-900 tracking-tight">Rafael Cabidelli</span>
                 </div>
                 
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden lg:flex space-x-5 items-center">
                     <a href="#home" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Início</a>
                     <a href="#cases" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Cases</a>
                     <a href="#learning" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Competências</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-blue-900 font-medium">Depoimentos</a>
                     <a href="#experience" class="text-slate-600 hover:text-blue-900 font-medium transition-colors">Trajetória</a>
                     
                     <div class="flex items-center border-l pl-6 ml-2 space-x-2">
@@ -48,7 +50,7 @@
                     <a href="#contact" class="bg-blue-900 text-white hover:bg-blue-800 px-5 py-2 rounded-lg font-medium transition-all hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10">Contato</a>
                 </div>
 
-                <div class="md:hidden flex items-center gap-4">
+                <div class="lg:hidden flex items-center gap-4">
                     <a href="index_en.html" class="text-xs font-bold bg-slate-100 px-2 py-1 rounded">EN</a>
                     <button aria-label="Abrir ou fechar navegação" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()" class="text-slate-600 focus:outline-none">
                         <i data-lucide="menu"></i>
@@ -56,11 +58,12 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl">
             <div class="px-4 py-6 space-y-4">
                 <a href="#home" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Início</a>
                 <a href="#cases" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Cases de Sucesso</a>
                 <a href="#learning" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Competências</a>
+                <a href="#testimonials" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Depoimentos</a>
                 <a href="#experience" onclick="toggleMenu()" class="block text-lg font-medium text-slate-700">Trajetória</a>
                 <a href="#contact" onclick="toggleMenu()" class="block text-lg font-bold text-blue-900 pt-2 border-t">Contato</a>
             </div>
@@ -285,6 +288,37 @@
             </div>
         </div>
     </section>
+
+<!-- testimonials:start -->
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Quem trabalhou comigo</h2>
+      <p>Experiências partilhadas por quem fez parte do meu percurso profissional.</p>
+      <div class="testimonials-layout"><div><div class="testimonials-panel"><h3>Já trabalhámos juntos?</h3><p>Conta como foi partilharmos a operação, um projeto ou uma equipa. Um exemplo concreto pode ajudar outras pessoas a conhecer a minha forma de trabalhar.</p><small>Os depoimentos serão apresentados aqui após autorização e revisão. Não são publicados automaticamente.</small></div></div>
+        <div class="testimonials-panel"><h3>Partilhar um depoimento</h3>
+          <p id="testimonial-help">Podes autorizar a publicação ou enviar feedback apenas para mim. Campos com * são obrigatórios.</p>
+          <form action="https://formspree.io/f/mqpavado" method="POST" aria-describedby="testimonial-help testimonial-privacy">
+            <input type="hidden" name="form_type" value="professional_testimonial">
+            <input type="hidden" name="_subject" value="Portfolio: novo depoimento / new testimonial">
+            <input type="hidden" name="language" value="pt">
+            <div class="trap" aria-hidden="true"><label for="testimonial-trap">Leave empty</label><input id="testimonial-trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+            <label for="testimonial-name">Nome a apresentar *</label><input id="testimonial-name" name="name" required maxlength="100" autocomplete="name">
+            <label for="testimonial-email">Email para contacto *</label><input id="testimonial-email" name="email" type="email" required maxlength="254" autocomplete="email" aria-describedby="email-note"><small id="email-note">Usado para esclarecer ou confirmar o depoimento. Não será publicado.</small>
+            <label for="testimonial-role">Função (opcional)</label><input id="testimonial-role" name="role" maxlength="120" autocomplete="organization-title">
+            <label for="testimonial-company">Empresa ou projeto (opcional)</label><input id="testimonial-company" name="company" maxlength="120" autocomplete="organization">
+            <label for="testimonial-relationship">Como trabalhámos juntos? *</label><select id="testimonial-relationship" name="relationship" required><option value="">Selecionar</option><option value="colleague">Colega de equipa</option><option value="manager">Fui responsável pela tua equipa</option><option value="team_member">Fiz parte de uma equipa que lideraste</option><option value="project_partner">Parceiro de projeto</option><option value="other">Outra relação profissional</option></select>
+            <label for="testimonial-period">Período em que trabalhámos juntos *</label><input id="testimonial-period" name="period" required maxlength="100" placeholder="Ex.: 2019–2021">
+            <label for="testimonial-message">O teu depoimento *</label><textarea id="testimonial-message" name="message" rows="5" required minlength="20" maxlength="2000" aria-describedby="message-note"></textarea><small id="message-note">Entre 20 e 2000 caracteres. Evita dados de terceiros ou informações confidenciais das empresas.</small>
+            <fieldset><legend>Como posso usar a mensagem? *</legend>
+              <label class="choice"><input type="radio" name="publication_consent" value="private_only" checked required><span>Apenas para o Rafael. Não autorizo a publicação.</span></label>
+              <label class="choice"><input type="radio" name="publication_consent" value="public_authorized" required><span>Autorizo a publicação no portfólio do meu depoimento, nome e contexto profissional preenchido, após revisão do Rafael. O email permanece privado.</span></label>
+            </fieldset>
+            <p id="testimonial-privacy"><small>O formulário envia os dados ao Rafael através do Formspree. Podes pedir esclarecimentos ou a remoção de um depoimento através de rafaelcabidelli@gmail.com. Ao enviar, sairás para a confirmação do Formspree.</small></p>
+            <button type="submit">Enviar para revisão</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials:end -->
 
     <footer id="contact" class="bg-slate-900 text-white py-20">
         <div class="max-w-6xl mx-auto px-4 text-center">
